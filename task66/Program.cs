@@ -15,13 +15,17 @@ InputValue:
     return value;
 }
 
+int SumNumberInterval(int min, int max)
+{
+    int sum = 0;
+    for (int i = min; i <= max; i++)
+    {
+        sum = i + sum;
+    }
+    return sum;
+}
+
 int m = Input("Введите начальное число (M): ");
 int n = Input("Введите конечное число (N): ");
-
-int sum = 0;
-for (int i = m; i <= n; i++)
-{
-    sum = i + sum;
-}
 Console.WriteLine();
-Console.WriteLine($"M = {m}; N = {n} -> {sum}");
+Console.WriteLine($"M = {m}; N = {n} -> {SumNumberInterval(m,n)}");

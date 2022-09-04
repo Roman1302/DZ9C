@@ -16,11 +16,22 @@ InputValue:
     return value;
 }
 
+int[] ArrayOutput(int min, int max)
+{
+    int[] arra = new int[max-min+1];
+    int j=0;
+    for (int i = min; i <=max; i++)
+    {
+        arra[j] = i;
+        Console.Write(arra[j]);
+        if (i <= max - 1)
+            Console.Write(", ");
+    }
+    return arra;
+}
+
 int m = Input("Введите начальное число (M): ");
 int n = Input("Введите конечное число (N): ");
 
-for (int i = m; i <= n; i++)
-{
-    Console.Write($"{i}, ");
-}
+ArrayOutput(m,n);
 Console.WriteLine();
